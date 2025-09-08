@@ -20,10 +20,9 @@ lazy val microservice = Project(appName, file("."))
   .settings(
     majorVersion                     := 0,
     libraryDependencies              ++= AppDependencies.all,
-    scalaVersion := "2.13.12",
+    scalaVersion := "2.13.16",
     PlayKeys.playDefaultPort := 9957,
     scoverageSettings
   )
   .configs(IntegrationTest)
   .settings(integrationTestSettings(): _*)
-  .settings(resolvers += Resolver.jcenterRepo)
